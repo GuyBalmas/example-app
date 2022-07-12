@@ -43,37 +43,32 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
     <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <image>
+                        <name>guybalmas/example-app:${project.version}</name>
+                    </image>
+                    <environmentVariables>
+                        <BP_OCI_VERSION>${project.version}</BP_OCI_VERSION>
+                    </environmentVariables>
+                </configuration>
             </plugin>
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-surefire-plugin</artifactId>-->
+<!--&lt;!&ndash;                <version>2.12.4</version>&ndash;&gt;-->
+<!--                <configuration>-->
+<!--                    <forkMode>always</forkMode>-->
+<!--                    <environmentVariables>-->
+<!--                        <BP_OCI_VERSION>${project.version}</BP_OCI_VERSION>-->
+<!--                    </environmentVariables>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
         </plugins>
-<!--        <plugins>-->
-<!--            <plugin>-->
-<!--                &lt;!&ndash; Build an executable JAR &ndash;&gt;-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-jar-plugin</artifactId>-->
-<!--                <version>3.1.0</version>-->
-<!--                <configuration>-->
-<!--                    <archive>-->
-<!--                        <manifest>-->
-<!--                            <addClasspath>true</addClasspath>-->
-<!--                            <classpathPrefix>lib/</classpathPrefix>-->
-<!--                            <mainClass>org.example.Main</mainClass>-->
-<!--                        </manifest>-->
-<!--                    </archive>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
-<!--            <plugin>-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-compiler-plugin</artifactId>-->
-<!--                <configuration>-->
-<!--                    <source>1.8</source>-->
-<!--                    <target>1.8</target>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
-<!--        </plugins>-->
     </build>
 </project>
