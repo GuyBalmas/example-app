@@ -11,4 +11,17 @@ public class HelloController {
 		return "Hello World!";
 	}
 
+	@RequestMapping("/welcome")
+	public String welcome(){
+		String msg = "";
+		try{
+			msg = System.getenv("GREETING_MSG");
+		} catch (Exception e){
+			System.out.println("No env var called 'GREETING_MSG'");
+		}
+		if(!msg.isEmpty()){
+			System.out.println(msg);
+		}
+		return msg;
+	}
 }
