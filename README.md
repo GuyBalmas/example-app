@@ -21,7 +21,7 @@ kubectl get pods
 kubectl describe pod example-app-c4db594b-4zvxz
 kubectl logs example-app-c4db594b-4zvxz
 
-kubectl port-forward example-app-c4db594b-4zvxz 8080:8080
+kubectl port-forward example-app-5bd4bf4b64-kh949 8080:8080
 
 #View app 
 http://localhost:8080/
