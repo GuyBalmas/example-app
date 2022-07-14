@@ -18,8 +18,8 @@ jobs:
 
       - name: Configure Git
         run: |
-        git config user.name "GITHUB_USER"
-        git config user.email "flux-demo@users.noreply.github.com"
+          git config user.name "GITHUB_USER"
+          git config user.email "flux-demo@users.noreply.github.com"
 
       - name: Install Helm
         uses: azure/setup-helm@v1
