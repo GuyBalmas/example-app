@@ -21,7 +21,7 @@ jobs:
         with:
           version: v3.8.1
 
-      - run: git config user.name "GITHUB_USER"
+      - run: git config user.name "flux.user"
       - run: cd /home/runner/work/example-app/example-app
       - run: ls -a
       - run: helm template ./chart > ./manifest/manifest.yaml
