@@ -22,6 +22,7 @@ jobs:
           version: v3.8.1
 
       - run: git config user.name "GITHUB_USER"
+      - run: cd example-app
       - run: helm template ./chart > ./manifest/manifest.yaml
       - run: git add .
       - run: git commit -m "pushed manifest due to chart change"
