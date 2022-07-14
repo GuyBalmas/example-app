@@ -1,4 +1,4 @@
-name: chart handler example
+name: chart handler
 
 on:
   push:
