@@ -51,7 +51,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <image>
-                        <name>guybalmas/example-app:${project.version}</name>
+                        <name>docker.io/guybalmas/example-app:${project.version}</name>
                         <env>
                             <BP_OCI_TITLE>guybalmas/example-app</BP_OCI_TITLE>
                             <BP_OCI_VERSION>${project.version}</BP_OCI_VERSION>

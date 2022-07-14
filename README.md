@@ -29,6 +29,20 @@ kubectl exec -it example-app-5998bf6855-fzpgf -- sh
 
 ```
 
+View image build:
+```aidl
+# View image resource status
+kubectl get images
+kubectl get image my-image
+kp image status my-image
+
+# View build logs of my-image
+kp build logs my-image
+
+# View builds
+kubectl get builds
+```
+
 Generate a manifest
 ```aidl
 helm template ./chart > ./manifest/manifest.yaml
