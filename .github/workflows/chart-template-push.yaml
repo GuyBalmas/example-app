@@ -1,7 +1,6 @@
 name: chart handler example
 
 on:
-
   push:
     branches:
       - main
@@ -9,27 +8,26 @@ on:
       - chart
 
 jobs:
-
   build:
     runs-on: ubuntu-latest
     steps:
-        - name: Checkout
-          uses: actions/checkout@v3
-          with:
-            fetch-depth: 0
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
 
-        - name: Configure Git
-          run: |
-            git config user.name "GITHUB_USER"
-            git config user.email "flux-demo@users.noreply.github.com"
+      - name: Configure Git
+        run: |
+        git config user.name "GITHUB_USER"
+        git config user.email "flux-demo@users.noreply.github.com"
 
-        - name: Install Helm
-          uses: azure/setup-helm@v1
-          with:
-            version: v3.8.1
+      - name: Install Helm
+        uses: azure/setup-helm@v1
+        with:
+          version: v3.8.1
 
-        - run: helm template ./chart > ./manifest/manifest.yaml
-        - run: git add .
-        - run: git commit -m "pushed manifest due to chart change"
-        - run: git push
+      - run: helm template ./chart > ./manifest/manifest.yaml
+      - run: git add .
+      - run: git commit -m "pushed manifest due to chart change"
+      - run: git push
 
