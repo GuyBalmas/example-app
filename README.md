@@ -28,3 +28,8 @@ http://localhost:8080/
 kubectl exec -it example-app-5998bf6855-fzpgf -- sh
 
 ```
+
+Generate a manifest
+```aidl
+helm template ./chart > ./manifest/manifest.yaml
+```
