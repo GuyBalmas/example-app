@@ -61,9 +61,9 @@
                             <DOCKER_HOST>http://127.0.0.1:2375</DOCKER_HOST>
                         </env>
                     </image>
-<!--                    <environmentVariables>-->
-<!--                        <BP_OCI_VERSION>${project.version}</BP_OCI_VERSION>-->
-<!--                    </environmentVariables>-->
+                    <environmentVariables>
+                        <BP_OCI_VERSION>${project.version}</BP_OCI_VERSION>
+                    </environmentVariables>
                 </configuration>
                 <executions>
                     <execution>
