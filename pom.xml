@@ -58,11 +58,17 @@
                             <BP_OCI_AUTHORS>guybalmas</BP_OCI_AUTHORS>
                         </env>
                     </image>
-                    <environmentVariables>
-                        <BP_OCI_VERSION>${project.version}</BP_OCI_VERSION>
-                    </environmentVariables>
-                    <set_default>true</set_default>
+<!--                    <environmentVariables>-->
+<!--                        <BP_OCI_VERSION>${project.version}</BP_OCI_VERSION>-->
+<!--                    </environmentVariables>-->
                 </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>build-image</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
