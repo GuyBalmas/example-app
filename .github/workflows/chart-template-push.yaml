@@ -27,7 +27,7 @@ jobs:
         uses: unwrittenmedia/helm3-push-action@v1.0.2
         env:
           SOURCE_DIR: 'chart'
-          CHART_FOLDER: 'example-app-chart'
+          CHART_FOLDER: 'example'
           FORCE: 'True'
           CHARTMUSEUM_URL: 'https://172.17.16.1:9090'
           CHARTMUSEUM_USER: 'user'
