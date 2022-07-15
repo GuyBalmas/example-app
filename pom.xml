@@ -61,6 +61,7 @@
                     <environmentVariables>
                         <BP_OCI_VERSION>${project.version}</BP_OCI_VERSION>
                     </environmentVariables>
+                    <set_default>true</set_default>
                 </configuration>
             </plugin>
         </plugins>

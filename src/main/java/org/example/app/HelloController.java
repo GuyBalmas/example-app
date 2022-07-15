@@ -11,6 +11,7 @@ public class HelloController {
 		return "Hello World!";
 	}
 
+
 //	@RequestMapping("/welcome")
 //	public String welcome(){
 //		String msg = "";
