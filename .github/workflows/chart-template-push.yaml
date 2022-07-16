@@ -24,7 +24,7 @@ jobs:
       - run: cd /home/runner/work/example-app/example-app
       - run: ls -a
 
-      #      - name: Push Helm Chart to ChartMuseum
+#      - name: Push Helm Chart to ChartMuseum
 #        uses: unwrittenmedia/helm3-push-action@v1.0.2
 #        env:
 #          SOURCE_DIR: '.'
@@ -34,9 +34,9 @@ jobs:
 #          CHARTMUSEUM_USER: 'user'
 #          CHARTMUSEUM_PASSWORD: 'password'
 
-      - run: helm repo add chartmuseum http://192.168.206.1:9090/
-      - run: helm plugin install https://github.com/chartmuseum/helm-push
-      - run: helm cm-push chart/ chartmuseum
+#      - run: helm repo add chartmuseum http://192.168.206.1:9090/
+#      - run: helm plugin install https://github.com/chartmuseum/helm-push
+#      - run: helm cm-push chart/ chartmuseum
 
       - run: git config user.name "flux.user"
       - run: cd /home/runner/work/example-app/example-app
