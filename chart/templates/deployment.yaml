@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
         - name: example-app
-          image: guybalmas/example-app:b1.20220716.152941  # {"$imagepolicy": "flux-system:example-app"}
+          image: guybalmas/example-app:b2.20220716.201035  # {"$imagepolicy": "flux-system:example-app"}
           imagePullPolicy: Always
           env:
             - name: JAVA_TOOL_OPTIONS
