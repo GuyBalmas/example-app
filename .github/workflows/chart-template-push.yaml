@@ -34,7 +34,7 @@ jobs:
 #          CHARTMUSEUM_USER: 'user'
 #          CHARTMUSEUM_PASSWORD: 'password'
 
-      - run: helm repo add chartmuseum http://192.168.206.1:9090/
+      - run: helm repo add chartmuseum http://172.17.16.1:9090/
       - run: helm plugin install https://github.com/chartmuseum/helm-push
       - run: helm cm-push chart/ chartmuseum
 
