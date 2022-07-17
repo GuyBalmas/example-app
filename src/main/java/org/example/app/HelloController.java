@@ -22,6 +22,7 @@ public class HelloController {
 		}
 		if(!msg.isEmpty()){
 			System.out.println("IMAGE CHANGED!!!");
+			System.out.println("FINALLY!!!");
 			System.out.println(msg);
 		}
 		return msg;

@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: example-app
+  namespace: default
   labels:
     app: example-app
   annotations:
@@ -22,7 +23,7 @@ spec:
     spec:
       containers:
         - name: example-app
-          image: guybalmas/example-app:b2.20220716.201035  # {"$imagepolicy": "flux-system:example-app"}
+          image: {{ .Values.image }} # {"$imagepolicy": "flux-system:example-app"}
           imagePullPolicy: Always
           env:
             - name: JAVA_TOOL_OPTIONS

@@ -1,2 +1,6 @@
+image: guybalmas/example-app:b2.20220717.051343
+#  repository: guybalmas/example-app
+#  tag: b5.20220716.214409
+
 message:
-  greetings: "Welcome to Kpack + Flux demo!!!!!!!!!!!!!!!!!"
+  greetings: "Welcome to Kpack + Flux demo!"
