@@ -21,7 +21,7 @@ public class HelloController {
 			System.out.println("No env var called 'GREETING_MSG'");
 		}
 		if(!msg.isEmpty()){
-			System.out.println("changing the image!!");
+			System.out.println("changing the image:");
 			System.out.println(msg);
 		}
 		return msg;
