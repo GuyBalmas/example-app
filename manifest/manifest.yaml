@@ -4,6 +4,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: example-service
+  namespace: default
   labels:
     app: example-app
 spec:
@@ -21,6 +22,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: example-app
+  namespace: default
   labels:
     app: example-app
   annotations:
@@ -41,7 +43,7 @@ spec:
     spec:
       containers:
         - name: example-app
-          image: guybalmas/example-app:b2.20220716.201035  # {"$imagepolicy": "flux-system:example-app"}
+          image: guybalmas/example-app:b2.20220717.051343 # {"$imagepolicy": "flux-system:example-app"}
           imagePullPolicy: Always
           env:
             - name: JAVA_TOOL_OPTIONS
@@ -49,7 +51,7 @@ spec:
             - name: "BPL_JAVA_NMT_ENABLED"
               value: "false"
             - name: "GREETING_MSG"
-              value: Welcome to Kpack + Flux demo!!!!!!!!!!!!!!!!!
+              value: Welcome to Kpack + Flux demo!
           ports:
             - containerPort: 8080
           resources:
