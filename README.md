@@ -8,7 +8,7 @@ helm repo update
 helm search repo chartmuseum/example-app-chart
 
 helm install chartmuseum/example-app-chart --generate-name
-helm list
+helm list flux-system
 helm uninstall <release name>
 
 # View deployment
@@ -21,7 +21,7 @@ kubectl get pods
 kubectl describe pod example-app-c4db594b-4zvxz
 kubectl logs example-app-c4db594b-4zvxz
 
-kubectl port-forward example-app-5bd4bf4b64-kh949 8080:8080
+kubectl port-forward example-app-84b5989fff-84b4l 8080:8080
 
 #View app 
 http://localhost:8080/
