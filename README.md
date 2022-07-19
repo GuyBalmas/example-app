@@ -1,3 +1,17 @@
+### Watch your image being built:
+```aidl
+# View image resource status
+kubectl get images
+kubectl get image my-image
+kp image status my-image
+
+# View build logs of my-image
+kp build logs my-image
+
+# View builds
+kubectl get builds
+```
+
 Push app chart to chartmuseum
 ```aidl
 helm cm-push chart/ chartmuseum
@@ -21,7 +35,7 @@ kubectl get pods
 kubectl describe pod example-app-c4db594b-4zvxz
 kubectl logs example-app-c4db594b-4zvxz
 
-kubectl port-forward example-app-84b5989fff-84b4l 8080:8080
+kubectl port-forward example-app-5d456d8654-lhjcp  8080:8080
 
 #View app 
 http://localhost:8080/
@@ -41,9 +55,4 @@ kp build logs my-image
 
 # View builds
 kubectl get builds
-```
-
-Generate a manifest
-```aidl
-helm template ./chart > ./manifest/manifest.yaml
 ```

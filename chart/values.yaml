@@ -1,4 +1,4 @@
-image: guybalmas/example-app:b2.20220717.051343
+image: guybalmas/example-app:b1.20220717.034631
 
 message:
-  greetings: "Welcome to Kpack + Flux demo! if you see this message, chart changed!"
+  greetings: "Welcome to Kpack + Flux demo!"
