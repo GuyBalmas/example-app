@@ -1,4 +1,9 @@
-### Watch your image being built:
+`# `Hello World` SpringBoot Java web application
+- Runs on `http://localhost:8080/` by default.
+- Returns `Hello World!` on root endpoint '`/`'
+
+### Watch your image being built by kpack:
+**first commit & push your changes**
 ```aidl
 # View image resource status
 kubectl get images
