@@ -18,7 +18,7 @@ public class exampleapp {
 		} catch (Exception e){
 			System.out.println("No env var called 'GREETING_MSG'");
 		}
-		if(!msg.isEmpty()) {
+		if(msg != null && !msg.isEmpty()) {
 			System.out.println(msg);
 		}
 	}
